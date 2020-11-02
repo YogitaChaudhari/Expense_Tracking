@@ -1,0 +1,14 @@
+{% extends 'sideBar.html' %} {% block MainContent%}
+<form method="POST">
+    {% csrf_token%}
+    <table cellpading="10" cellspacing="10" border="1">
+        {{form.as_table}}
+
+        <tr>
+            <td><input type="submit" value="update"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+</form>
+
+{%endblock%}

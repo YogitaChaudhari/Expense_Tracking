@@ -1,0 +1,22 @@
+{% extends 'sideBar.html' %} {% block MainContent%}
+<table cellpading="10" cellspacing="10" border="1">
+
+    <tr>
+        <th>ExpenseId</th>
+        <th>Expense</th>
+        <th>ExpenseType</th>
+        <th>ExpenseDate</th>
+        <th>ExpenseDescription</th>
+
+    </tr>
+    {%for i in object_list%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.expense}}</td>
+        <td>{{i.expenseType}}</td>
+        <td>{{i.expenseDate}}</td>
+        <td>{{i.expenseDescription}}</td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock%}

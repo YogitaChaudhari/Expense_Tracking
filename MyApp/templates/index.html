@@ -1,0 +1,6 @@
+{% extends 'sideBar.html' %} {% block MainContent%} {% if user.is_authenticated %}
+<h1>Welcome : {{userN}}</h1>
+<h1>Total Balance : {{bal}} </h1>
+{%else%}
+<h1>This is Home page</h1>
+{%endif%} {% endblock %}
